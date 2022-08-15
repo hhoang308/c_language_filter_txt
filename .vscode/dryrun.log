@@ -1,0 +1,6 @@
+make.exe --dry-run --always-make --keep-going --print-directory
+make: Entering directory 'c:/Users/huyho/Downloads/c_language_filter_txt'
+gcc -o filter_cfg filter_cfg.c
+filter_cfg
+make: Leaving directory 'c:/Users/huyho/Downloads/c_language_filter_txt'
+ 
