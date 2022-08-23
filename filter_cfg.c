@@ -70,18 +70,22 @@ void read_words(FILE *f)
 }
 int main(int argc, char *argv[])
 {
-	FILE *in_file = fopen(filename, "r");
-	if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0)
+	if (argc < 2)
+	{
+		FILE *in_file = fopen(filename, "r");
+		read_words(in_file);
+		fclose(in_file);
+	}
+	else if (strcmp(argv[1], "-h") == 0 || strcmp(argv[1], "--help") == 0)
 	{
 		printf("Info: Pham Duc Hai\n");
-		printf("	  Dai hoc Cong Nghe - DHQGHN\n");
-		printf("	  phamduchai@gmail.com\n");
-		printf("	  091231842\n");
+		printf("Dai hoc Cong Nghe - DHQGHN\n");
+		printf("phamduchai@gmail.com\n");
+		printf("091231842\n");
 		printf("usage nwcfg [OPTIONS]\n");
 		printf("	  OPTIONS :-	--help	-h showhelp\n");
-		printf("					.....\n");
+		printf("				.....\n");
 	}
-	read_words(in_file);
-	fclose(in_file);
+
 	return 0;
 }
